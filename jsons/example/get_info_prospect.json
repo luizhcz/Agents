@@ -1,0 +1,41 @@
+{
+    "nome_fundo": "Fundo de Investimento Alpha",
+    "cnpj_fundo": "12.345.678/0001-90",
+    "classificacao_fundo": "renda fixa",
+    "risco": "alto",
+    "cota": "100.002",
+    "administrador": {
+        "nome": "Investimento Beta",
+        "cnpj": "22.333.444/0001-90"
+    },
+    "valorCota": "100.01",
+    "valorInicial": "100.000.000,00",
+    "objetivo": "O fundo tem como objetivo fazer aplicações em títulos de renda fixa.",
+    "codigo_ISIN": "BR1234567890",
+    "codigo_negociacao": "FIA123",
+    "segmento_ANBIMA": "Títulos e Valores Mobiliários",
+    "preco_emissao": "98.37",
+    "montante_total_oferta": "80.000.091,09",
+    "montante_minimo_oferta": "10.000.097,46",
+    "num_cotas_disponiveis": "813.257",
+    "data_inicio_oferta": "2023-09-01",
+    "prazo_colocacao": "2023-10-01",
+    "gestor_fundo": {
+        "nome": "RBR Gestão de Recursos Ltda.",
+        "cnpj": "18.259.351/0001-87"
+    },
+    "taxa_administracao": "1.5%",
+    "taxa_performance": "20% sobre o que exceder o CDI",
+    "distribuidor": "XP Investimentos S.A.",
+    "regulamento_fundo": "https://www.exemplo.com/regulamento.pdf",
+    "publico_alvo": "Investidores institucionais e pessoas físicas qualificados",
+    "fatores_risco": [
+        "Risco de mercado",
+        "Risco de liquidez",
+        "Risco de crédito"
+    ],
+    "rentabilidade_passada": "A rentabilidade passada não garante resultados futuros.",
+    "liquidez": "Mensal",
+    "tributacao": "Imposto de Renda sobre ganho de capital",
+    "prazo_resgate": "60 dias"
+}

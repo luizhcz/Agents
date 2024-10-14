@@ -1,0 +1,25 @@
+{
+    "agent": {
+        "role": "File Reader",
+        "goal": "Read the text and find the information in the prospectus.",
+        "backstory": "You are responsible for reading and finding important information based on the instructions.",
+        "verbose": true,
+        "memory": true,
+        "max_iter": 20,
+        "max_execution_time" : 999999
+    },
+    "task": {
+        "description": " **Instructions:**\n\n Find the data and extract the following data from a prospectus in Portuguese:\n\n 1. **Nome do Fundo (nome_fundo)**: Extraia o nome do fundo conforme mencionado no prospecto.\n\n 2. **CNPJ do Fundo (cnpj_fundo)**: Extraia o CNPJ do fundo como indicado no prospecto.\n\n 3. **Classificação do Fundo (classificacao_fundo)**: Identifique a categoria ou tipo do fundo de acordo com as classificações abaixo:\n - Fundos de Renda Fixa -> renda fixa\n - Fundos de Ações -> acao\n - Fundos Multimercado -> multimercado\n - Fundos Cambiais -> cambio\n - Fundos de Investimento Imobiliário -> fii\n - Fundos de Índices -> etf\n - Fundos de Crédito Privado -> private equity\n - Fundos de Capital Estrangeiro -> capital estrangeiro\n - Fundos Referenciados -> referenciado\n - Fundos de Previdência -> previdência\n\n 4. **Risco (risco)**: Informe o risco do fundo conforme as categorias a seguir:\n - Risco baixo -> baixo\n - Risco baixo a moderado -> baixoModerado\n - Risco médio -> medio\n - Risco moderado a médio -> medioModerado\n - Risco alto -> alto\n - Risco moderado a alto -> altoModerado\n - Risco variável -> variavel\n\n 5. **Cota (cota)**: Informe a quantidade de cotas disponibilizadas pelo fundo.\n\n 6. **Administrador (administrador)**: Identifique o administrador do fundo e seu CNPJ.\n\n 7. **Valor da Cota (valorCota)**: Extraia o valor unitário da cota, conforme informado no prospecto.\n\n 8. **Valor Inicial (valorInicial)**: Informe o valor inicial do fundo.\n\n 9. **Objetivo do Fundo (objetivo)**: Extraia o objetivo principal do fundo conforme descrito no prospecto.\n\n 10. **Código ISIN (codigo_ISIN)**: Extraia o código ISIN, que é um identificador único para o fundo negociado.\n\n 11. **Código de Negociação (codigo_negociacao)**: Extraia o código de negociação do fundo, que é utilizado em bolsas de valores como a B3.\n\n 12. **Segmento ANBIMA (segmento_ANBIMA)**: Identifique o segmento do fundo conforme classificação da ANBIMA (por exemplo, \"Títulos e Valores Mobiliários\").\n\n 13. **Preço de Emissão (preco_emissao)**: Extraia o valor de emissão de cada cota, como informado no prospecto.\n\n 14. **Montante Total da Oferta (montante_total_oferta)**: Informe o valor total da oferta pública de cotas.\n\n 15. **Montante Mínimo da Oferta (montante_minimo_oferta)**: Informe o montante mínimo de investimento necessário para a participação na oferta.\n\n 16. **Número de Cotas Disponíveis (num_cotas_disponiveis)**: Extraia a quantidade de cotas disponibilizadas para emissão ou venda na oferta pública.\n\n 17. **Data de Início da Oferta (data_inicio_oferta)**: Extraia a data de início da oferta pública de cotas do fundo.\n\n 18. **Prazo de Colocação (prazo_colocacao)**: Identifique o período durante o qual as cotas estarão disponíveis para subscrição.\n\n 19. **Gestor do Fundo (gestor_fundo)**: Identifique a instituição gestora do fundo e seu CNPJ.\n\n 20. **Taxa de Administração (taxa_administracao)**: Informe o valor da taxa de administração cobrada pelo fundo.\n\n 21. **Taxa de Performance (taxa_performance)**: Extraia o valor da taxa de performance, se aplicável, cobrada sobre o rendimento do fundo.\n\n 22. **Distribuidor (distribuidor)**: Informe o nome da corretora ou instituição responsável pela distribuição das cotas.\n\n 23. **Regulamento do Fundo (regulamento_fundo)**: Extraia o link ou referência ao regulamento oficial do fundo.\n\n 24. **Público-Alvo (publico_alvo)**: Descreva o público-alvo do fundo, conforme informado no prospecto (por exemplo, investidores institucionais, pessoas físicas, etc.).\n\n 25. **Fatores de Risco (fatores_risco)**: Liste os principais riscos envolvidos no investimento no fundo, conforme descritos no prospecto.\n\n 26. **Rentabilidade Passada (rentabilidade_passada)**: Informe se há detalhes sobre a rentabilidade passada do fundo, com a ressalva de que não garante resultados futuros.\n\n 27. **Liquidez (liquidez)**: Informe a liquidez do fundo (por exemplo, diária, mensal, semestral), conforme indicado.\n\n 28. **Tributação (tributacao)**: Extraia as informações sobre a tributação aplicável ao fundo e aos investidores.\n\n 29. **Prazo de Resgate (prazo_resgate)**: Informe o prazo necessário para resgatar as cotas, se aplicável.\n\n        {content}",
+        "expected_output": " The return must be in Portuguese in JSON format. \n\n JSON response example: \n\n {example}",
+        "max_execution_time" : 999999
+    },
+    "crew": {
+        "verbose": 2,
+        "max_execution_time" : 999999
+    },
+    "model_config": {
+        "model_name": "gpt-4o-mini",
+        "temperature": 0.1,
+        "max_execution_time": 999999
+    }
+}
