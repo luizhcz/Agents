@@ -26,7 +26,7 @@ This project provides a framework for setting up and executing text and table pr
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/luizhcz/Agents.git
+   https://github.com/luizhcz/CrewAI-Processing-Service.git
    ```
 
 2. Install dependencies:
